@@ -13,12 +13,12 @@ class CategoriaController
         $model = new CategoriaModel();
         $model->getAllRows();
 
-        include VIEWS . '/Categoria/ListaCategoria.php';
+        include 'View/modules/Categoria/ListaCategoria.php';
     }
 
     public static function form()
     {
-        include VIEWS . '/Categoria/CategoriaCadastro.php';
+        include 'View/modules/Categoria/CategoriaCadastro.php';
     }
 
     public static function save() 

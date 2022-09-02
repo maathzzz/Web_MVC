@@ -22,7 +22,7 @@ class PessoaController
         $model = new PessoaModel();
         $model->getAllRows();
 
-        include VIEWS . '/Pessoa/ListaPessoas.php';
+        include 'View/modules/Pessoa/ListaPessoas.php';
     }
 
    /**
@@ -30,7 +30,7 @@ class PessoaController
      */
     public static function form()
     {    
-        include VIEWS . 'Pessoa/FormPessoa.php';
+        include 'View/modules/Pessoa/FormPessoa.php';
     }
 
     /**

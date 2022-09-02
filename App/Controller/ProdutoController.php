@@ -12,12 +12,12 @@ class ProdutoController
         $model = new ProdutoModel();
         $model->getAllRows();
 
-        include VIEWS . '/Produto/ProdutoListar.php';
+        include 'View/modules/Produto/ProdutoListar.php';
     }
 
     public static function form()
     {
-        include VIEWS . '/Produto/ProdutoCadastro.php';
+        include 'View/modules/Produto/ProdutoCadastro.php';
     }
 
     public static function save() {
