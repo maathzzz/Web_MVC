@@ -2,18 +2,35 @@
 
 spl_autoload_register(function ($classe_buscada) 
 {
+        /* $arquivo = BASEDIR . '/' . $classe_buscada. '.php';
 
-        $base = dirname(__FILE__);
+        if(file_exists($arquivo))
+        {
+                include $arquivo;
+        } else 
+        exit ('Arquivo nao encontrado. Arquivo: ' . $arquivo . "<br />");
 
-        $arquivo_controller = "$base/Controller/" . $classe_buscada . ".php";
-        $arquivo_model = "$base/Model/" . $classe_buscada . ".php";
-        $arquivo_dao = "$base/DAO/" . $classe_buscada . ".php";
+        $base = dirname(__FILE__); */
 
-        if (file_exists($arquivo_controller))
-                include $arquivo_controller;
-        else if (file_exists($arquivo_model))
-                include $arquivo_model;
-        else if (file_exists($arquivo_dao))
-                include $arquivo_dao;
+        $classe_controller = "Controller/" . $classe_buscada . ".php";
+        $classe_model = "Model/" . $classe_buscada . ".php";
+        $classe_dao = "DAO/" . $classe_buscada . ".php";
+
+        if (file_exists($classe_controller)){
+
+                include $classe_controller;
+        }
+        else if (file_exists($classe_model)){
+
+                include $classe_model;
+
+        }
+        else if (file_exists($classe_dao)){
+
+                include $classe_dao;
+
+        }             
 
 });
+
+?>

@@ -12,8 +12,6 @@ $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 //echo $uri_parse;
 //echo "<hr />";
 
-include 'autoload.php';
-
 switch($uri_parse)
 {
 
@@ -80,6 +78,6 @@ switch($uri_parse)
     break;
 
     default:
-        echo "erro 404";
+        echo "erro404";
     break;
 }

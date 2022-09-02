@@ -13,8 +13,8 @@ class CategoriaDAO
     {
 
         $dsn = "mysql:host=localhost:3307;dbname=db_sistema";
-        $user = "root"; // seu user
-        $pass = "etecjau"; // sua senha
+        $user = "matheus"; // seu user
+        $pass = "165432lu"; // sua senha
         
         $this->conexao = new PDO($dsn, $user, $pass);
     }

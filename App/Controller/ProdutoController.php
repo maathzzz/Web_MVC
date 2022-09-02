@@ -9,21 +9,18 @@ class ProdutoController
 
     public static function index() 
     {
-        include 'Model/ProdutoModel.php';
         $model = new ProdutoModel();
         $model->getAllRows();
 
-        include 'View/modules/Produto/ProdutoListar.php';
+        include VIEWS . '/Produto/ProdutoListar.php';
     }
 
     public static function form()
     {
-        include 'View/modules/Produto/ProdutoCadastro.php';
+        include VIEWS . '/Produto/ProdutoCadastro.php';
     }
 
     public static function save() {
-
-        include 'Model/ProdutoModel.php'; 
 
         $produto = new ProdutoModel();
         $produto->nome = $_POST['nome'];
@@ -40,7 +37,6 @@ class ProdutoController
 
     public static function delete()
     {
-        include 'Model/ProdutoModel.php'; // inclusão do arquivo model.
 
         $model = new ProdutoModel();
 

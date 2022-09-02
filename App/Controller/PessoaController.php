@@ -18,28 +18,25 @@ class PessoaController
      * Os métodos index serão usados para devolver uma View.
      */
     public static function index() 
-    {
-        include 'Model/PessoaModel.php';
+    {      
         $model = new PessoaModel();
         $model->getAllRows();
 
-        include 'View/modules/Pessoa/ListaPessoas.php';
+        include VIEWS . '/Pessoa/ListaPessoas.php';
     }
 
    /**
      * Devolve uma View contendo um formulário para o usuário.
      */
     public static function form()
-    {
-        include 'View/modules/Pessoa/FormPessoa.php';
+    {    
+        include VIEWS . 'Pessoa/FormPessoa.php';
     }
 
     /**
      * Preenche um Model para que seja enviado ao banco de dados para salvar.
      */
     public static function save() {
-
-        include 'Model/PessoaModel.php'; // inclusão do arquivo model.
 
         // Abaixo cada propriedade do objeto sendo abastecida com os dados informados
         // pelo usuário no formulário (note o envio via POST)
@@ -59,7 +56,6 @@ class PessoaController
 
     public static function delete()
     {
-        include 'Model/PessoaModel.php'; // inclusão do arquivo model.
 
         $model = new PessoaModel();
 
