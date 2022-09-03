@@ -7,7 +7,7 @@
     <title>Lista Pessoas</title>
 </head>
 <body>
-    <h1>Lista de Pessoas</h1>
+    <h1>Lista de Pessoas Físicas</h1>
     <table>
         <tr>
             <th>Id</th>

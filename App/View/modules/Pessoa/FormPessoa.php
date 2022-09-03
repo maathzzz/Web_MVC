@@ -12,7 +12,7 @@
 <body>
     <form action="/pessoa/save" method="post">
         <fieldset>
-            <legend>Cadastro de Pessoa</legend>
+            <legend>Cadastro de Pessoa Física</legend>
             <label for="nome">Nome:</label>
             <input name="nome" id="nome" type="text" />
 
