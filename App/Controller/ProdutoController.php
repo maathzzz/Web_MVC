@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Model\ProdutoModel;
 
-class ProdutoController 
+class ProdutoController extends Controller
 {
 
     public static function index() 

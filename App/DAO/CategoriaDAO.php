@@ -5,18 +5,14 @@ namespace App\DAO;
 use App\Model\CategoriaModel;
 use \PDO;
 
-class CategoriaDAO
+class CategoriaDAO extends DAO
 {
-    private $conexao;
 
     function __construct() 
     {
 
-        $dsn = "mysql:host=localhost:3307;dbname=db_sistema";
-        $user = "matheus"; // seu user
-        $pass = "165432lu"; // sua senha
-        
-        $this->conexao = new PDO($dsn, $user, $pass);
+        parent::__construct();
+     
     }
 
     function insert(CategoriaModel $model) 

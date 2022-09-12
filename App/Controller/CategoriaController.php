@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Model\CategoriaModel;
 
 
-class CategoriaController 
+class CategoriaController extends Controller
 {
 
     public static function index() 

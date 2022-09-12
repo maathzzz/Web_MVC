@@ -12,7 +12,7 @@ use App\Model\PessoaModel;
  * buscar algo no banco de dados), redirecionar o usuário de rota, ou mesmo,
  * chamar outra Controller.
  */
-class PessoaController 
+class PessoaController
 {
     /**
      * Os métodos index serão usados para devolver uma View.
@@ -30,6 +30,7 @@ class PessoaController
      */
     public static function form()
     {    
+        $model = new PessoaModel();
         include 'View/modules/Pessoa/FormPessoa.php';
     }
 

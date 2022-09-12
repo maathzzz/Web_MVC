@@ -4,11 +4,10 @@ namespace App\Model;
 
 use App\DAO\CategoriaDAO;
 
-class CategoriaModel
+class CategoriaModel extends Model
 {
 
     public $id, $nome, $descricao;
-    public $rows;
 
     public function save()
     {

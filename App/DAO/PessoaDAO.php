@@ -9,33 +9,14 @@ use \PDO;
  * As classes DAO (Data Access Object) são responsáveis por executar os
  * SQL junto ao banco de dados.
  */
-class PessoaDAO
+class PessoaDAO extends DAO
 {
-    /**
-     * Atributo (ou Propriedade) da classe destinado a armazenar o link (vínculo aberto)
-     * de conexão com o banco de dados.
-     */
-    private $conexao;
 
-
-    /**
-     * Método construtor, sempre chamado na classe quando a classe é instanciada.
-     * Exemplo de instanciar classe (criar objeto da classe):
-     * $dao = new PessoaDAO();
-     * Neste caso, assim que é instânciado, abre uma conexão com o MySQL (Banco de dados)
-     * A conexão é aberta via PDO (PHP Data Object) que é um recurso da linguagem para
-     * acesso a diversos SGBDs.
-     */
     function __construct() 
     {
-        // DSN (Data Source Name) onde o servidor MySQL será encontrado
-        // (host) em qual porta o MySQL está operado e qual o nome do banco pretendido. 
-        $dsn = "mysql:host=localhost:3307;dbname=db_sistema";
-        $user = "matheus";
-        $pass = "165432lu";
-        
-        // Criando a conexão e armazenado na propriedade definida para tal.
-        $this->conexao = new PDO($dsn, $user, $pass);
+        // Chamando a classe construct, comum à todas as classes do tipo DAO (conexão com o banco de dados)
+        parent::__construct();
+
     }
 
 
